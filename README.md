@@ -2,6 +2,8 @@
 
 This project is a Java-based Client-Server application that manages a personal library catalog. It allows users to browse and manage a collection of some of my favorite games, movies, books, and other media. The project demonstrates core compentencies in Java OOP, data structures and algorithms, client-server architecture, etc.
 
+![Home Page](Demo%20Images/3.%20Home%20Page.png)
+
 ## Features
 
 - **Catalog Browsing**: Users can view a list of games, movies, books, and other media, with options to checkout, borrow, or search items.
