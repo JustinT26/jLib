@@ -9,17 +9,6 @@ This project is a Java-based Client-Server application that manages a personal l
 - **Persistent Storage**: The server stores data locally on your machine, ensuring data such as borrwed items and accounts are retained between sessions.
 - **And many more!**
 
-## Prerequisites
-
-- Java JDK 8 or later
-- git
-  
-## Installation
-
-`git clone https://gitfront.io/r/JustinT26/Azwgu28bqt8W/jLib.git`
-
-Alternatively, manually download this repository.
-
 ## How to use
 1. Navigate to `src/Launcher`.
 2. Double click on `Launcher.jar` to launch the application.
@@ -28,7 +17,5 @@ Alternatively, manually download this repository.
 5. Login and enjoy browsing a collection of some my favorite movies, shows, books, etc.!
    - Please see the attached `User Manual` for more details.
   
-## Contact
-For any inquiries, feel free to contact me at justinthai@utexas.edu
-
-
+## Author
+Justin Thai
