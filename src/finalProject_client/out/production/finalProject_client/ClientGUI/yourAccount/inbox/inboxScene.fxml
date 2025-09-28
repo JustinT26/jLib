@@ -1,0 +1,168 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.MenuItem?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="943.0" prefWidth="1422.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientGUI.yourAccount.inbox.inbox_controller">
+   <children>
+      <ImageView fitHeight="947.0" fitWidth="1428.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../yourItems/viewItem_backgrund.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="164.0" fitWidth="250.0" layoutX="586.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../loginScene/jLib_logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" layoutX="-12.0" layoutY="-2.0" strokeType="INSIDE" width="1437.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.6626139879226685" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <Label fx:id="welcomeText" layoutX="621.0" layoutY="11.0" text="Welcome, user!">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="yourAccountButton" layoutX="1083.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchYourAccountScene" onMouseEntered="#hoverOver_yourAccountButton" onMouseExited="#hoverExit_yourAccountButton" prefHeight="31.0" prefWidth="144.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="Your Account" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="signOutButton" layoutX="1241.0" layoutY="11.0" mnemonicParsing="false" onAction="#signOut" onMouseEntered="#hoverOver_signOutButton" onMouseExited="#hoverExit_signOutButton" prefHeight="31.0" prefWidth="108.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="Sign Out">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Button>
+      <Hyperlink layoutX="59.0" layoutY="10.0" onAction="#switchToYourItems" text="Your Items" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="184.0" layoutY="10.0" onAction="#switchToReadingList" text="Reading List" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="628.0" layoutX="69.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="1285.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="629.0" layoutX="69.0" layoutY="318.0" stroke="#ffffff00" strokeType="INSIDE" width="1284.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.39694657921791077" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="667.0" layoutY="329.0" text="Inbox" textFill="#3d6fcd">
+         <font>
+            <Font name="Ebrima Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="goBackButton" layoutX="102.0" layoutY="387.0" mnemonicParsing="false" onAction="#switchToHomeScreen" onMouseEntered="#hoverOver_goBackButton" onMouseExited="#hoverExit_goBackButton" prefHeight="43.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="&lt; HOME" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="22.0" />
+         </font>
+      </Button>
+      <ScrollPane fx:id="inboxPane" layoutX="388.0" layoutY="405.0" prefHeight="541.0" prefWidth="691.0" style="-fx-background-color: transparent;">
+         <content>
+            <VBox fx:id="inboxVbox" fillWidth="false" prefWidth="674.0" spacing="50.0" style="-fx-background-color: transparent;">
+               <padding>
+                  <Insets left="25.0" top="20.0" />
+               </padding>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Hyperlink layoutX="324.0" layoutY="10.0" onAction="#switchToFriends" text="Friends" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Button fx:id="inboxTab_Button" layoutX="388.0" layoutY="374.0" mnemonicParsing="false" onAction="#switchTo_inboxTab" onMouseEntered="#hoverOver_inboxTabButton" onMouseExited="#hoverExit_inboxTabButton" prefHeight="31.0" prefWidth="108.0" style="-fx-background-color: f2ca36; -fx-border-color: b9b9b9;" text="Inbox">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="sendMsgTab_Button" layoutX="496.0" layoutY="374.0" mnemonicParsing="false" onAction="#switchTo_sendMsgTab" onMouseEntered="#hoverOver_sendMsgTabButton" onMouseExited="#hoverExit_sendMsgTabButton" prefHeight="31.0" prefWidth="122.0" style="-fx-background-color: #e4e4e4; -fx-border-color: b9b9b9;" text="Send Message">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Button>
+      <Label fx:id="userNotFound_Label" alignment="CENTER" layoutX="855.0" layoutY="374.0" prefHeight="27.0" prefWidth="271.0" text="User not found!" textAlignment="CENTER" textFill="#d42f3d" visible="false">
+         <font>
+            <Font name="System Bold Italic" size="18.0" />
+         </font>
+      </Label>
+      <Hyperlink disable="true" layoutX="429.0" layoutY="10.0" text="Inbox" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <AnchorPane fx:id="sendMsgPane" layoutX="388.0" layoutY="405.0" prefHeight="283.0" prefWidth="691.0" visible="false">
+         <children>
+            <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="283.0" stroke="TRANSPARENT" strokeType="INSIDE" width="691.0" />
+            <MenuButton fx:id="sendMsgTo_Menu" layoutX="33.0" layoutY="29.0" mnemonicParsing="false" prefHeight="39.0" prefWidth="201.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="Send To:">
+              <items>
+                  <MenuItem mnemonicParsing="false" onAction="#choseRecipient" style="-fx-text-fill: ff0000; -fx-font-weight: bold;" text="ADMIN" />
+              </items>
+               <font>
+                  <Font name="Ebrima" size="14.0" />
+               </font>
+            </MenuButton>
+            <TextField fx:id="messageBox" alignment="TOP_LEFT" layoutX="33.0" layoutY="91.0" onAction="#sendMessageToRecipient" onKeyTyped="#userTypingMsg" prefHeight="123.0" prefWidth="623.0" promptText="Type your message...">
+               <font>
+                  <Font name="Ebrima" size="18.0" />
+               </font>
+            </TextField>
+            <Button fx:id="sendMsg" disable="true" layoutX="512.0" layoutY="234.0" mnemonicParsing="false" onAction="#sendMessageToRecipient" onMouseEntered="#hoverOver_sendMsgButton" onMouseExited="#hoverExit_sendMsgButton" prefHeight="31.0" prefWidth="144.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="Send" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="14.0" />
+               </font>
+            </Button>
+            <Label fx:id="sentLabel" alignment="CENTER" layoutX="428.0" layoutY="236.0" prefHeight="27.0" prefWidth="75.0" text="Sent!" textAlignment="CENTER" textFill="#00dd3b" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+         </children>
+      </AnchorPane>
+   </children>
+</AnchorPane>

@@ -1,0 +1,307 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.geometry.Insets?>
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.CheckBox?>
+<?import javafx.scene.control.CheckMenuItem?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.MenuButton?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.control.TextField?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="943.0" prefWidth="1422.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientGUI.viewItem.viewItem_controller">
+   <children>
+      <ImageView fitHeight="947.0" fitWidth="1428.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@../homeScreen/homePage_background.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="164.0" fitWidth="250.0" layoutX="12.0" layoutY="64.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../homeScreen/jLib_logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" layoutX="-12.0" layoutY="-2.0" strokeType="INSIDE" width="1437.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.6626139879226685" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke></Rectangle>
+      <Label fx:id="welcomeText" layoutX="621.0" layoutY="11.0" text="Welcome, user!">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="yourAccountButton" layoutX="1083.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchYourAccountScene" onMouseEntered="#hoverOver_yourAccountButton" onMouseExited="#hoverExit_yourAccountButton" prefHeight="31.0" prefWidth="144.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="Your Account" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="signOutButton" layoutX="1241.0" layoutY="11.0" mnemonicParsing="false" onAction="#signOut" onMouseEntered="#hoverOver_signOutButton" onMouseExited="#hoverExit_signOutButton" prefHeight="31.0" prefWidth="108.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="Sign Out">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Button>
+      <Hyperlink layoutX="59.0" layoutY="10.0" onAction="#switchToYourItems" text="Your Items" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="184.0" layoutY="10.0" onAction="#switchToReadingList" text="Reading List" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="56.0" layoutX="269.0" layoutY="112.0" stroke="BLACK" strokeType="INSIDE" width="878.0" />
+      <TextField fx:id="searchText" layoutX="278.0" layoutY="122.0" onAction="#search" prefHeight="35.0" prefWidth="617.0" promptText="Search for an item..." style="-fx-background-color: transparent;">
+         <font>
+            <Font name="Ebrima Bold" size="18.0" />
+         </font>
+      </TextField>
+      <Button fx:id="searchButton" layoutX="992.0" layoutY="124.0" mnemonicParsing="false" onAction="#search" onMouseEntered="#hoverOver_searchButton" onMouseExited="#hoverExit_searchButton" prefHeight="31.0" prefWidth="144.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="SEARCH" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Button>
+      <MenuButton fx:id="filterButton" layoutX="901.0" layoutY="126.0" mnemonicParsing="false" onMouseEntered="#hoverOver_filterButton" onMouseExited="#hoverExit_filterButton" style="-fx-background-color: transparent;" text="Filter" textFill="#3d6fcd">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+         <items>
+            <CheckMenuItem fx:id="filterBooks" mnemonicParsing="false" text="Books" />
+            <CheckMenuItem fx:id="filterDVDs" mnemonicParsing="false" text="DVDs" />
+            <CheckMenuItem fx:id="filterGames" mnemonicParsing="false" text="Games" />
+         </items>
+      </MenuButton>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="628.0" layoutX="69.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="1285.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="629.0" layoutX="69.0" layoutY="318.0" stroke="#ffffff00" strokeType="INSIDE" width="1284.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.39694657921791077" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <AnchorPane layoutX="217.0" layoutY="316.0" prefHeight="630.0" prefWidth="946.0">
+         <children>
+            <Label fx:id="itemTitle" layoutX="407.0" layoutY="34.0" prefHeight="47.0" prefWidth="640.0" text="Call Of Duty: Black Ops II">
+               <font>
+                  <Font name="Ebrima Bold" size="36.0" />
+               </font>
+            </Label>
+            <ImageView fx:id="itemImage" fitHeight="454.0" fitWidth="380.0" layoutX="53.0" layoutY="-59.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/CODBO2.jpg" />
+               </image>
+            </ImageView>
+            <ImageView fitHeight="35.0" fitWidth="36.0" layoutX="406.0" layoutY="90.0" pickOnBounds="true" preserveRatio="true">
+               <image>
+                  <Image url="@../Images/reviewStar.png" />
+               </image>
+            </ImageView>
+            <Label fx:id="itemRatings" layoutX="449.0" layoutY="96.0" text="5.0">
+               <font>
+                  <Font name="Ebrima Bold" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="itemYear" layoutX="414.0" layoutY="141.0" text="Year">
+               <font>
+                  <Font name="System Italic" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="type" layoutX="546.0" layoutY="143.0" text="Item Type">
+               <font>
+                  <Font name="Ebrima" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="genre" alignment="TOP_LEFT" layoutX="412.0" layoutY="191.0" prefHeight="67.0" prefWidth="120.0" text="Genre" wrapText="true">
+               <font>
+                  <Font name="Ebrima" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="uniqueField" layoutX="546.0" layoutY="191.0" prefHeight="30.0" prefWidth="324.0" text="Unique field" wrapText="true">
+               <font>
+                  <Font name="Ebrima" size="20.0" />
+               </font>
+            </Label>
+            <Button fx:id="returnButton" layoutX="579.0" layoutY="352.0" mnemonicParsing="false" onAction="#returnItem" onMouseEntered="#hoverOver_returnButton" onMouseExited="#hoverExit_returnButton" prefHeight="43.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="RETURN" textFill="WHITE" visible="false">
+               <font>
+                  <Font name="Ebrima Bold" size="22.0" />
+               </font>
+            </Button>
+            <Label fx:id="copiesAvailable" layoutX="410.0" layoutY="271.0" text="Copies Available: x">
+               <font>
+                  <Font name="Ebrima Bold" size="22.0" />
+               </font>
+            </Label>
+            <Button fx:id="checkoutButton" layoutX="406.0" layoutY="352.0" mnemonicParsing="false" onAction="#checkout" onMouseEntered="#hoverOver_checkoutButton" onMouseExited="#hoverExit_checkoutButton" prefHeight="43.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #30ae5a;" text="CHECKOUT" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="22.0" />
+               </font>
+            </Button>
+            <Label fx:id="checkoutAttemptStatus" layoutX="406.0" layoutY="318.0" prefHeight="27.0" prefWidth="250.0" text="Success!" textAlignment="CENTER" textFill="#20a427" visible="false">
+               <font>
+                  <Font name="System Bold Italic" size="18.0" />
+               </font>
+            </Label>
+            <Label layoutX="50.0" layoutY="446.0" text="Description:">
+               <font>
+                  <Font name="Ebrima Bold" size="22.0" />
+               </font>
+            </Label>
+            <Label fx:id="description" alignment="TOP_LEFT" layoutX="51.0" layoutY="486.0" prefHeight="123.0" prefWidth="321.0" text="Enter description here" wrapText="true">
+               <font>
+                  <Font name="Ebrima" size="20.0" />
+               </font>
+            </Label>
+            <Label fx:id="youHaveAmount" layoutX="578.0" layoutY="406.0" text="You have x copies" visible="false">
+               <font>
+                  <Font name="System Bold" size="18.0" />
+               </font>
+            </Label>
+            <AnchorPane layoutX="414.0" layoutY="435.0" prefHeight="196.0" prefWidth="547.0">
+               <children>
+                  <AnchorPane fx:id="writeReviewPane" prefHeight="163.0" prefWidth="590.0" visible="false" AnchorPane.topAnchor="0.0">
+                     <children>
+                        <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="163.0" layoutX="1.0" layoutY="33.0" stroke="WHITE" strokeType="INSIDE" width="590.0" />
+                        <Button fx:id="submitReviewButton" disable="true" layoutX="163.0" layoutY="156.0" mnemonicParsing="false" onAction="#submitReview" onMouseEntered="#hoverOver_submitReviewButton" onMouseExited="#hoverExit_submitReviewButton" prefHeight="31.0" prefWidth="144.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="Submit Review" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="reviewNevermindButton" layoutX="320.0" layoutY="156.0" mnemonicParsing="false" onAction="#nevermindReview" onMouseEntered="#hoverOver_reviewNevermindButton" onMouseExited="#hoverExit_reviewNevermindButton" prefHeight="31.0" prefWidth="108.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="Nevermind">
+                           <font>
+                              <Font name="Ebrima Bold" size="14.0" />
+                           </font>
+                        </Button>
+                        <TextField fx:id="writeReviewText" layoutX="39.0" layoutY="107.0" onAction="#submitReview" onKeyTyped="#userTypingReview" prefHeight="26.0" prefWidth="514.0" promptText="What did you think of it?">
+                           <font>
+                              <Font name="Ebrima" size="14.0" />
+                           </font>
+                        </TextField>
+                        <Button fx:id="rating1" layoutX="64.0" layoutY="43.0" mnemonicParsing="false" onAction="#selectRating" onMouseEntered="#hoverOver_rating1Button" onMouseExited="#hoverExit_rating1Button" prefHeight="50.0" prefWidth="52.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="1">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="rating5" layoutX="470.0" layoutY="43.0" mnemonicParsing="false" onAction="#selectRating" onMouseEntered="#hoverOver_rating5Button" onMouseExited="#hoverExit_rating5Button" prefHeight="50.0" prefWidth="52.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="5">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="rating2" layoutX="167.0" layoutY="42.0" mnemonicParsing="false" onAction="#selectRating" onMouseEntered="#hoverOver_rating2Button" onMouseExited="#hoverExit_rating2Button" prefHeight="50.0" prefWidth="52.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="2">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="rating3" layoutX="267.0" layoutY="43.0" mnemonicParsing="false" onAction="#selectRating" onMouseEntered="#hoverOver_rating3Button" onMouseExited="#hoverExit_rating3Button" prefHeight="50.0" prefWidth="52.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="3">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Button>
+                        <Button fx:id="rating4" layoutX="368.0" layoutY="43.0" mnemonicParsing="false" onAction="#selectRating" onMouseEntered="#hoverOver_rating4Button" onMouseExited="#hoverExit_rating4Button" prefHeight="50.0" prefWidth="52.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="4">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Button>
+                     </children>
+                  </AnchorPane>
+                  <ScrollPane fx:id="reviewScrollPane" layoutY="33.0" pannable="true" prefHeight="163.0" prefWidth="590.0">
+                     <content>
+                        <VBox fx:id="reviewVBox" prefHeight="167.0" prefWidth="574.0">
+                           <padding>
+                              <Insets top="5.0" />
+                           </padding></VBox>
+                     </content>
+                  </ScrollPane>
+                  <Button fx:id="reviewsButton" mnemonicParsing="false" onAction="#seeReviews" onMouseEntered="#hoverOver_reviewsButton" onMouseExited="#hoverExit_reviewsButton" prefHeight="31.0" prefWidth="108.0" style="-fx-background-color: f2ca36; -fx-border-color: b9b9b9;" text="Reviews">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="leaveAReviewButton" layoutX="108.0" mnemonicParsing="false" onAction="#leaveAReview" onMouseEntered="#hoverOver_leaveAReviewButton" onMouseExited="#hoverExit_leaveAReviewButton" prefHeight="31.0" prefWidth="126.0" style="-fx-background-color: #e4e4e4; -fx-border-color: b9b9b9;" text="Leave a review">
+                     <font>
+                        <Font name="Ebrima Bold" size="14.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <AnchorPane fx:id="checkedOutCopiesPane" layoutX="758.0" layoutY="163.0" prefHeight="273.0" prefWidth="168.0" visible="false">
+               <children>
+                  <VBox fx:id="checkedOutCopiesVBox" prefHeight="234.0" prefWidth="168.0" style="-fx-background-color: #ffffff;">
+                     <children>
+                        <CheckBox fx:id="returnAllCheckBox" lineSpacing="1.0" mnemonicParsing="false" onAction="#setReturnAllCheckBox" text="Return All">
+                           <font>
+                              <Font size="14.0" />
+                           </font>
+                        </CheckBox>
+                     </children>
+                  </VBox>
+                  <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="33.0" layoutY="236.0" stroke="WHITE" strokeType="INSIDE" width="168.0" />
+                  <Button fx:id="returnNevermindButton" layoutX="9.0" layoutY="239.0" mnemonicParsing="false" onAction="#setReturnNevermindButton" onMouseEntered="#hoverOver_returnNevermindButton" onMouseExited="#hoverExit_returnNevermindButton" prefHeight="25.0" prefWidth="69.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="NEVERMIND">
+                     <font>
+                        <Font name="Ebrima Bold" size="9.0" />
+                     </font>
+                  </Button>
+                  <Button fx:id="returnConfirmButton" layoutX="87.0" layoutY="239.0" mnemonicParsing="false" onAction="#confirmReturns" onMouseEntered="#hoverOver_returnConfirmButton" onMouseExited="#hoverExit_returnConfirmButton" prefHeight="25.0" prefWidth="72.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="Confirm" textFill="WHITE">
+                     <font>
+                        <Font name="Ebrima Bold" size="12.0" />
+                     </font>
+                  </Button>
+               </children>
+            </AnchorPane>
+            <Button fx:id="addReadingListButton" layoutX="116.0" layoutY="404.0" mnemonicParsing="false" onAction="#addOrRemove_ReadingList" prefHeight="31.0" prefWidth="195.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="Add to Reading List" textFill="WHITE">
+               <font>
+                  <Font name="Ebrima Bold" size="14.0" />
+               </font>
+            </Button>
+         </children>
+      </AnchorPane>
+      <Button fx:id="goBackButton" layoutX="92.0" layoutY="377.0" mnemonicParsing="false" onAction="#switchToHomeScreen" onMouseEntered="#hoverOver_goBackButton" onMouseExited="#hoverExit_goBackButton" prefHeight="43.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="&lt; GO BACK" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="22.0" />
+         </font>
+      </Button>
+      <Hyperlink layoutX="324.0" layoutY="10.0" onAction="#switchToFriends" text="Friends" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="429.0" layoutY="10.0" onAction="#switchToInbox" text="Inbox" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

@@ -1,0 +1,1407 @@
+<?xml version="1.0" encoding="UTF-8"?>
+
+<?import javafx.scene.control.Button?>
+<?import javafx.scene.control.Hyperlink?>
+<?import javafx.scene.control.Label?>
+<?import javafx.scene.control.ScrollPane?>
+<?import javafx.scene.image.Image?>
+<?import javafx.scene.image.ImageView?>
+<?import javafx.scene.layout.AnchorPane?>
+<?import javafx.scene.layout.VBox?>
+<?import javafx.scene.paint.Color?>
+<?import javafx.scene.paint.LinearGradient?>
+<?import javafx.scene.paint.Stop?>
+<?import javafx.scene.shape.Rectangle?>
+<?import javafx.scene.text.Font?>
+
+<AnchorPane fx:id="background" maxHeight="1.7976931348623157E308" maxWidth="1.7976931348623157E308" minHeight="-Infinity" minWidth="-Infinity" prefHeight="943.0" prefWidth="1422.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="ClientGUI.yourAccount.yourItems.yourItems_controller">
+   <children>
+      <ImageView fitHeight="947.0" fitWidth="1428.0" layoutX="-2.0" layoutY="-1.0" pickOnBounds="true">
+         <image>
+            <Image url="@viewItem_backgrund.jpg" />
+         </image>
+      </ImageView>
+      <ImageView fitHeight="164.0" fitWidth="250.0" layoutX="586.0" layoutY="105.0" pickOnBounds="true" preserveRatio="true">
+         <image>
+            <Image url="@../../loginScene/jLib_logo.png" />
+         </image>
+      </ImageView>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="WHITE" height="57.0" layoutX="-12.0" layoutY="-2.0" strokeType="INSIDE" width="1437.0">
+         <stroke>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.6626139879226685" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </stroke>
+      </Rectangle>
+      <Label fx:id="welcomeText" layoutX="621.0" layoutY="11.0" text="Welcome, user!">
+         <font>
+            <Font name="Ebrima Bold" size="24.0" />
+         </font>
+      </Label>
+      <Button fx:id="yourAccountButton" layoutX="1083.0" layoutY="11.0" mnemonicParsing="false" onAction="#switchYourAccountScene" onMouseEntered="#hoverOver_yourAccountButton" onMouseExited="#hoverExit_yourAccountButton" prefHeight="31.0" prefWidth="144.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="Your Account" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Button>
+      <Button fx:id="signOutButton" layoutX="1241.0" layoutY="11.0" mnemonicParsing="false" onAction="#signOut" onMouseEntered="#hoverOver_signOutButton" onMouseExited="#hoverExit_signOutButton" prefHeight="31.0" prefWidth="108.0" style="-fx-background-radius: 50; -fx-background-color: #e4e4e4;" text="Sign Out">
+         <font>
+            <Font name="Ebrima Bold" size="14.0" />
+         </font>
+      </Button>
+      <Hyperlink disable="true" layoutX="59.0" layoutY="10.0" text="Your Items" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="184.0" layoutY="10.0" onAction="#switchToReadingList" text="Reading List" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Rectangle arcHeight="5.0" arcWidth="5.0" fill="RED" height="628.0" layoutX="69.0" layoutY="318.0" stroke="BLACK" strokeType="INSIDE" visible="false" width="1285.0" />
+      <Rectangle arcHeight="5.0" arcWidth="5.0" height="629.0" layoutX="69.0" layoutY="318.0" stroke="#ffffff00" strokeType="INSIDE" width="1284.0">
+         <fill>
+            <LinearGradient endX="1.0" endY="1.0">
+               <stops>
+                  <Stop>
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" />
+                     </color>
+                  </Stop>
+                  <Stop offset="1.0">
+                     <color>
+                        <Color red="1.0" green="1.0" blue="1.0" opacity="0.39694657921791077" />
+                     </color>
+                  </Stop>
+               </stops>
+            </LinearGradient>
+         </fill>
+      </Rectangle>
+      <Label layoutX="634.0" layoutY="339.0" text="Your Items:" textFill="#3d6fcd">
+         <font>
+            <Font name="Ebrima Bold" size="30.0" />
+         </font>
+      </Label>
+      <Button fx:id="goBackButton" layoutX="102.0" layoutY="387.0" mnemonicParsing="false" onAction="#switchToHomeScreen" onMouseEntered="#hoverOver_goBackButton" onMouseExited="#hoverExit_goBackButton" prefHeight="43.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="&lt; HOME" textFill="WHITE">
+         <font>
+            <Font name="Ebrima Bold" size="22.0" />
+         </font>
+      </Button>
+      <ScrollPane fx:id="scrollPane" layoutX="388.0" layoutY="405.0" prefHeight="541.0" prefWidth="691.0" style="-fx-background-color: transparent;">
+         <content>
+            <VBox fx:id="userItemsVBox" prefHeight="542.0" prefWidth="674.0" spacing="25.0" style="-fx-background-color: transparent;">
+               <children>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+                  <AnchorPane prefHeight="333.0" prefWidth="643.0" visible="false">
+                     <children>
+                        <Label layoutX="261.0" layoutY="17.0" prefHeight="23.0" prefWidth="326.0" text="Call of Duty: Black Ops II">
+                           <font>
+                              <Font name="Ebrima Bold" size="24.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="299.0" layoutY="65.0" text="5.0">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="264.0" layoutY="116.0" prefHeight="18.0" prefWidth="69.0" text="2012">
+                           <font>
+                              <Font name="System Italic" size="22.0" />
+                           </font>
+                        </Label>
+                        <Label layoutX="261.0" layoutY="166.0" prefHeight="18.0" prefWidth="69.0" text="Game">
+                           <font>
+                              <Font name="System Bold" size="22.0" />
+                           </font>
+                        </Label>
+                        <ImageView fitHeight="357.0" fitWidth="235.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/CODBO2.jpg" />
+                           </image>
+                        </ImageView>
+                        <Button layoutX="256.0" layoutY="223.0" mnemonicParsing="false" prefHeight="51.0" prefWidth="148.0" style="-fx-background-radius: 50; -fx-background-color: #3d6fcd;" text="VIEW" textFill="WHITE">
+                           <font>
+                              <Font name="Ebrima Bold" size="22.0" />
+                           </font>
+                        </Button>
+                        <ImageView fitHeight="32.0" fitWidth="35.0" layoutX="259.0" layoutY="62.0" pickOnBounds="true" preserveRatio="true">
+                           <image>
+                              <Image url="@../../Images/reviewStar.png" />
+                           </image>
+                        </ImageView>
+                     </children>
+                  </AnchorPane>
+               </children>
+            </VBox>
+         </content>
+      </ScrollPane>
+      <Hyperlink layoutX="324.0" layoutY="10.0" onAction="#switchToFriends" text="Friends" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+      <Hyperlink layoutX="429.0" layoutY="10.0" onAction="#switchToInbox" text="Inbox" textFill="#3d6fcd">
+         <font>
+            <Font name="System Bold" size="16.0" />
+         </font>
+      </Hyperlink>
+   </children>
+</AnchorPane>

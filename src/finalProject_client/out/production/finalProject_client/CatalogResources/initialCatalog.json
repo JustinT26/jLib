@@ -1,0 +1,122 @@
+[
+  {
+    "itemType": "Book",
+    "quantity": 10,
+    "title": "The Great Gatsby",
+    "description": "A novel by F. Scott Fitzgerald",
+    "publishedYear": 1925,
+    "imagePath": "/CatalogResources/Images/TheGreatGatsby.jpg",
+    "author": "F. Scott Fitzgerald",
+    "pages": 180,
+    "genre": "Fiction"
+  },
+
+  {
+    "itemType": "DVD",
+    "quantity": 2,
+    "title": "The Conjuring",
+    "description": "A film directed by James Wan",
+    "publishedYear": 2013,
+    "imagePath": "/CatalogResources/Images/TheConjuring.jpg",
+    "hours": 1,
+    "minutes": 52,
+    "genre": "Horror"
+  },
+
+  {
+    "itemType": "Game",
+    "quantity": 2,
+    "title": "Mortal Kombat: Deception",
+    "description": "A fighting video game developed by Midway Games",
+    "publishedYear": 2004,
+    "imagePath": "/CatalogResources/Images/MortalKombatDeception.jpg",
+    "platform": "PlayStation 2",
+    "genre": "Fighting"
+  },
+
+  {
+    "itemType": "Game",
+    "quantity": 5,
+    "title": "Call of Duty: Black Ops II",
+    "description": "A first-person shooter game developed by Treyarch",
+    "publishedYear": 2012,
+    "imagePath": "/CatalogResources/Images/CODBO2.jpg",
+    "platform": "Xbox 360",
+    "genre": "First-Person Shooter"
+  },
+
+  {
+    "itemType": "Book",
+    "quantity": 7,
+    "title": "Holes",
+    "description": "A young adult mystery novel by Louis Sachar",
+    "publishedYear": 1998,
+    "imagePath": "/CatalogResources/Images/Holes.jpg",
+    "author": "Louis Sachar",
+    "pages": 233,
+    "genre": "Mystery"
+  },
+
+  {
+    "itemType": "DVD",
+    "quantity": 2,
+    "title": "Ted",
+    "description": "A comedy film directed by Seth MacFarlane",
+    "publishedYear": 2012,
+    "imagePath": "/CatalogResources/Images/Ted.jpg",
+    "hours": 1,
+    "minutes": 46,
+    "genre": "Comedy"
+  },
+
+  {
+    "itemType": "Game",
+    "quantity": 3,
+    "title": "Grand Theft Auto V",
+    "description": "An action-adventure game developed by Rockstar North",
+    "publishedYear": 2013,
+    "imagePath": "/CatalogResources/Images/GTA5.jpg",
+    "platform": "Xbox One",
+    "genre": "Action-Adventure"
+  },
+
+  {
+    "itemType": "Book",
+    "quantity": 7,
+    "title": "The Count of Monte Cristo",
+    "description": "An adventure novel by Alexandre Dumas",
+    "publishedYear": 1844,
+    "imagePath": "/CatalogResources/Images/TheCountOfMonteCristo.jpg",
+    "author": "Alexandre Dumas",
+    "pages": 1276,
+    "genre": "Adventure, Historical Fiction"
+  },
+
+  {
+    "itemType": "Book",
+    "quantity": 3,
+    "title": "Diary of a Wimpy Kid",
+    "description": "A comedic novel written and illustrated by Jeff Kinney",
+    "publishedYear": 2007,
+    "imagePath": "/CatalogResources/Images/DiaryOfAWimpyKid.jpg",
+    "author": "Jeff Kinney",
+    "pages": 224,
+    "genre": "Children's Fiction, Comedy"
+  },
+
+  {
+    "itemType": "DVD",
+    "quantity": 3,
+    "title": "Regular Show: The Complete First Season",
+    "description": "A collection of episodes from the animated television series Regular Show",
+    "publishedYear": 2011,
+    "imagePath": "/CatalogResources/Images/RegularShowSeason1.jpg",
+    "hours": 4,
+    "minutes": 2,
+    "genre": "Cartoon"
+  }
+
+
+
+
+]
